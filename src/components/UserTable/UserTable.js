@@ -4,7 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 const UserTable = () => {
     const { data: users, isLoading, isError, error } = useQuery({
         queryKey: ['users'],
-        queryFn: () => fetch(`http://localhost:5000/users`).then(res => res.json()).catch(error => console.log(error))
+        queryFn: () => fetch(`https://api-react-app-server.vercel.app/users`).then(res => res.json()).catch(error => console.log(error))
     })
     console.log(users);
 
@@ -18,7 +18,7 @@ const UserTable = () => {
 
     return (
         <>
-            <Table striped bordered hover>
+            <Table striped bordered hover responsive>
                 <thead>
                     <tr>
                         <th>#</th>
