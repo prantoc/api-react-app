@@ -1,10 +1,17 @@
-import './App.css';
+import { Col, Container, Row } from 'react-bootstrap';
+import UserTable from './components/UserTable/UserTable';
 
 function App() {
   return (
-    <div className="App">
+    <Container className='py-5'>
+      <h1>Users Table</h1>
+      <Row>
+        <Col md={12}>
+          <UserTable />
+        </Col>
+      </Row>
 
-    </div>
+    </Container>
 
   );
 }
